@@ -66,3 +66,35 @@ def randomForest_giridSearch_crossValid(X_train, y_train, X_test, y_test):
     # Evaluate the model performance
     report = classification_report(y_test, y_pred)
     print(report)
+
+def svm_giridSearch_crossValid(X_train, y_train, X_test, y_test):
+    
+        # Let's build a SVM model
+    
+        # Define hyperparameter values to be tuned
+        param_grid = {
+            "C": [0.1, 1, 10],
+            "kernel": ["linear", "rbf"],
+            "gamma": ["scale", "auto"]
+        }    
+        # Create a SVM model
+        svm = SVC()
+    
+        # Create a GridSearchCV object to perform hyperparameter tuning
+        grid_search = GridSearchCV(svm, param_grid, cv=5, scoring='accuracy',n_jobs=10)
+        grid_search.fit(X_train, y_train)
+    
+        # Get the best hyperparameter
+        best_params = grid_search.best_params_
+        print("Best Hyperparameters: ", best_params)
+    
+        # Fit the SVM model with best hyperparameter to the training data
+        best_svm = SVC(**best_params)
+        best_svm.fit(X_train, y_train)
+    
+        # Predict the churn value for the test set
+        y_pred = best_svm.predict(X_test)
+    
+        # Evaluate the model performance
+        report = classification_report(y_test, y_pred)
+        print(report)
