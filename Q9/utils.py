@@ -7,17 +7,16 @@ from sklearn.svm import SVC
 def logreg_giridSearch_crossValid(X_train, y_train, X_test, y_test):
 
     # Define hyperparameter values to be tuned
-    param_grid = {'penalty': ['l1', 'l2', 'elasticnet', 'none'],
-                'C': [0.001, 0.01, 0.1, 1, 10],
-                'solver': ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga'],
-                'max_iter': [100, 500, 1000],
+    param_grid = {'penalty': ['l1', 'l2'],
+                'C': [0.01, 0.1, 1],
+                'solver': ['liblinear', 'saga'],
                 'class_weight': [None, 'balanced']}
 
     # Create a logistic regression model
     logreg = LogisticRegression()
 
     # Create a GridSearchCV object to perform hyperparameter tuning
-    grid_search = GridSearchCV(logreg, param_grid, cv=5, scoring='accuracy')
+    grid_search = GridSearchCV(logreg, param_grid, cv=5, scoring='accuracy',n_jobs=10)
     grid_search.fit(X_train, y_train)
 
     # Get the best hyperparameter
@@ -40,18 +39,17 @@ def randomForest_giridSearch_crossValid(X_train, y_train, X_test, y_test):
     # Let's build a random forest model
 
     # Define hyperparameter values to be tuned
-    param_grid = {'n_estimators': [100, 500, 1000],
-                    'criterion': ['gini', 'entropy'],
-                    'max_depth': [None, 5, 10, 15],
-                    'min_samples_split': [2, 5, 10],
-                    'min_samples_leaf': [1, 2, 4],
-                    'max_features': ['auto', 'sqrt', 'log2'],
-                    'bootstrap': [True, False]}
+    param_grid = {
+        "n_estimators": [100, 500],
+        "max_depth": [5, 10],
+        "min_samples_split": [2, 5],
+        "min_samples_leaf": [1, 2],
+    }
     # Create a random forest model
     rf = RandomForestClassifier()
 
     # Create a GridSearchCV object to perform hyperparameter tuning
-    grid_search = GridSearchCV(rf, param_grid, cv=5, scoring='accuracy')
+    grid_search = GridSearchCV(rf, param_grid, cv=5, scoring='accuracy',n_jobs=10)
     grid_search.fit(X_train, y_train)
 
     # Get the best hyperparameter
