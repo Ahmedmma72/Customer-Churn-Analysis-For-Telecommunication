@@ -1,4 +1,4 @@
-# Telecommunication Churn Analysis
+# Customer Churn Analysis For Telecommunication
 
 ## 📝 Table of Contents
 
