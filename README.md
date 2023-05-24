@@ -13,7 +13,7 @@ Customer churn is a major concern for telecommunications companies, as retaining
 
 ## 📊 Dataset <a name = "dataset"></a>
 You can find the dataset we used for this project here:
-`<br>`
+<br>
 [IBM Watson Analytics Sample Dataset - Telco Customer Churn]( https://www.kaggle.com/datasets/ylchang/telco-customer-churn-1113)
 
 ## 💻Tools & Technologies <a name = "tools"></a>
