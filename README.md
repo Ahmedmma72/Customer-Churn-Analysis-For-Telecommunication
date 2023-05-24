@@ -9,7 +9,7 @@
 
 ## 🚩Overview <a name = "about"></a>
 
-Customer churn is a major concern for telecommunications companies, as retaining existing customers is more cost-effective than acquiring new ones. The goal of this project is to analyze customer data, identify factors contributing to customer churn, and develop a predictive model to help the company reduce customer churn rates. Based on the insights gained, we will propose targeted marketing strategies and customer retention initiatives.
+Customer churn is a major concern for telecommunications companies, as retaining existing customers is more cost-effective than acquiring new ones. The goal of this project is to analyze customer data, answer various questions, identify factors contributing to customer churn, and develop predictive models to help the company reduce customer churn rates. Based on the insights gained, we will propose targeted marketing strategies and customer retention initiatives.
 
 ## 📊 Dataset <a name = "dataset"></a>
 You can find the dataset we used for this project here:
