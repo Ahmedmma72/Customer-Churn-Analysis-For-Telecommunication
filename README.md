@@ -7,16 +7,16 @@
 - [Tools &amp; Technologies](#tools)
 - [Questions Answered](#questions)
 
-## 🚩Overview `<a name = "about"></a>`
+## 🚩Overview <a name = "about"></a>
 
 Customer churn is a major concern for telecommunications companies, as retaining existing customers is more cost-effective than acquiring new ones. The goal of this project is to analyze customer data, identify factors contributing to customer churn, and develop a predictive model to help the company reduce customer churn rates. Based on the insights gained, we will propose targeted marketing strategies and customer retention initiatives.
 
-## 📊 Dataset `<a name = "dataset"></a>`
+## 📊 Dataset <a name = "dataset"></a>
 You can find the dataset we used for this project here:
 `<br>`
 [IBM Watson Analytics Sample Dataset - Telco Customer Churn]( https://www.kaggle.com/datasets/ylchang/telco-customer-churn-1113)
 
-## 💻Tools & Technologies `<a name = "tools"></a>`
+## 💻Tools & Technologies <a name = "tools"></a>
 
 - **Python**
 - **Jupyter Notebook**  
@@ -25,7 +25,7 @@ You can find the dataset we used for this project here:
 - **sklearn**
 - **tableau**
 
-## 🧾 Questions Answered `<a name= "questions"></a>`
+## 🧾 Questions Answered <a name= "questions"></a>
 
 The project is divided into questions each in a separate folder inside which the code is found in a jupyter notebook. Each notebook is typically divided into 3 to 4 sections:
 1. Question statement and Expectations
